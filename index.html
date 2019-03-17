@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>RPS Multiplayer</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" href="" />
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">Rock Paper Scissors Multiplayer</h1>
+            <p class="lead">One Vs. One</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="player1">Enter Player 1:</label>
+                        <input type="text" class="form-control" id="playerOneInput" placeholder="Player 1 Username">
+                    </div>
+                    <button type="submit" class="btn btn-primary submitOne">Submit</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="player2">Enter Player 2: </label>
+                        <input type="text" class="form-control" id="playerTwoInput" placeholder="Player 2 Username">
+                    </div>
+                    <button type="submit" class="btn btn-primary submitTwo">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Player One: <span id="playerOneUsername"></span></p>
+                <p class="choiceOne" id="rock1">Rock</p>
+                <p class="choiceOne" id="paper1">Paper</p>
+                <p class="choiceOne" id="scissors1">Scissors</p>
+            </div>
+            <div class="col-md-6">
+                <p>Player Two: <span id="playerTwoUsername"></span></p>
+                <p class="choiceTwo" id="rock2">Rock</p>
+                <p class="choiceTwo" id="paper2">Paper</p>
+                <p class="choiceTwo" id="scissors2">Scissors</p>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Wins: <span id="wins1"></span></p>
+                <p>Losses: <span id="losses1"></span></p>
+            </div>
+            <div class="col-md-6">
+                <p>Wins: <span id="wins2"></span></p>
+                <p>Losses: <span id="losses2"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="chatHistory"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="chatForm">
+
+                    <form class="form-inline">
+                        <label class="chatInput" for="chatInput"></label>
+                        <input type="text" class="chatInput" id="inlineChatInput" placeholder="Say something!">
+
+                        <button type="submit" class="btn btn-primary mb-2 chatSubmit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/app.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+</body>
+</head>
+
+</html>
